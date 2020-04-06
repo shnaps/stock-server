@@ -11,7 +11,7 @@ import java.util.concurrent.ThreadLocalRandom;
 class PriceService {
 
 	public Flux<StockPrice> generatePrices(String symbol) {
-		return Flux.interval(Duration.ofSeconds(1)).
+		return Flux.interval(Duration.ofSeconds(3)).
 				map(el -> new StockPrice(symbol, randomStockPrice(), LocalDateTime.now()));
 	}
 
