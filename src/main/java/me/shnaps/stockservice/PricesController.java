@@ -15,7 +15,7 @@ class PricesController {
 	}
 
 	@GetMapping(value = "/stocks/{symbol}", produces = {
-			MediaType.APPLICATION_STREAM_JSON_VALUE,
+			MediaType.APPLICATION_JSON_VALUE,
 			MediaType.TEXT_EVENT_STREAM_VALUE
 	})
 	public Flux<StockPrice> prices(@PathVariable String symbol) {
